@@ -1,0 +1,1119 @@
+body {
+    /* background-color: #fdc5f5; */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+/* header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 0.5rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+}
+
+/* header logo */
+header .logo {
+    font-family: cursive;
+    font-size: 3rem;
+    color: #252323;
+    font-weight: 700;
+    margin-left: -120px;
+    background: linear-gradient(45deg, #f0b3e2, #ffe5ec, #ffdd59);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #ff6b6b; /* #e798da Outline around the text */
+}
+
+header  img {
+    height: 8%;
+    width: 8%; 
+    color: #e78cda;
+    margin-left: -60px;
+}
+
+/* header navbar ancher tag */
+header .navbar a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+}
+
+header .navbar a:hover {
+    color: #fdc5f5;
+    font-weight: 500;
+}
+
+/* header navbar icons anchor tag */
+header .icons a {
+    font-size: 3rem;
+    color: #333;
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover {
+    color: #fb6f92;
+    font-weight: 600;
+}
+
+/* header input */
+header #toggler {
+    display: none;
+}
+
+/* header input icons */
+
+header .fa-bars {
+    font-size: 3rem;
+    color: #333;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    border: 0.1rem solid rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+
+/* Media Quires */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header .fa-bars {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #eee;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+        /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
+    }
+
+    header #toggler:checked~.navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background-color: #fff;
+        border: 1rem solid rgba(0, 0, 0, 0.1);
+        display: block;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+/* header section end */
+
+/* home section start */
+section {
+    padding: 2rem 9%;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(bakery-name-ideas.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.cake {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(abouthome.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.cake .content {
+    max-width: 50rem;
+}
+
+.cake .content h3 {
+    font-size: 5rem;
+    color: #ffe5ec;
+}
+
+.cakeofmonth {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    justify-content: flex-end; /* Align items to the right */
+    min-height: 100vh;
+    background-image: url(cakeofmonth.jfif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative; /* Set the container as relative for positioning children */
+}
+
+.cakeofmonth .content {
+    text-align: right;
+    max-width: 60rem;
+    position: absolute; /* Allow the content to be positioned absolutely */
+    top: 0; /* Position at the top */
+    right: 0; /* Position to the right */
+    padding: 2rem; /* Add some padding to keep text from touching the edges */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background for better text readability */
+}
+
+.cakeofmonth .content h3 {
+    font-size: 5rem;
+    color: #ffe5ec;
+    margin: 0; /* Remove default margin */
+}
+
+.cakeofmonth .content span {
+    font-size: 3rem;
+    color: #ff8fab;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.cakeofmonth .content p {
+    font-size: 1.5rem;
+    color: #ccc;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.connnect {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(contacthome.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.connnect .content {
+    max-width: 50rem;
+}
+
+.connnect .content h3 {
+    font-size: 5rem;
+    color: #ffe5ec;
+}
+
+.aboutus {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(aboutushome.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.aboutus .content {
+    max-width: 50rem;
+}
+
+.aboutus .content h3 {
+    font-size: 5rem;
+    color: #ffe5ec;
+}
+
+.home .content {
+    max-width: 50rem;
+}
+
+.home .content h3 {
+    font-size: 5rem;
+    color: #ffe5ec;
+}
+
+.home .content span {
+    font-size: 3rem;
+    color: #ff8fab;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.home .content p {
+    font-size: 1.5rem;
+    color: #ccc;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #252323;
+    border-radius: 3rem;
+    color: white;
+    padding: 0.9rem 3.5rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #fb6f92;
+}
+
+/* responsive home section */
+@media (max-width: 991px) {
+    section {
+        padding: 2rem;
+    }
+
+    .home {
+        background-position: left;
+    }
+
+    .home .content h3 {
+        font-size: 5rem;
+    }
+
+    .home .content span {
+        font-size: 2.5rem;
+    }
+}
+
+/* home section end */
+
+
+/* mission Section Start */
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    background-color: rgba(255, 51, 184, 0.05);
+}
+
+.heading span {
+    color: #fb6f92;
+}
+
+.mission .row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+}
+
+.mission .row .video_container {
+    flex: 1 1 40rem;
+    /* how a flex item will grow or shrink to fit the space available in its flex container. */
+    color: #fb6f92;
+    position: relative;
+}
+
+.mission .row .video_container video {
+    width: 100%;
+    height: 100%;
+    border: 1.5rem solid #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+
+}
+
+.mission .row .video_container h3 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    background-color: #fff;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+
+}
+
+.mission .row .content {
+      flex: 1 1 40rem;
+}
+
+.mission .row .content h3 {
+    font-size: 3rem;
+    color: #333;
+}
+
+.mission .row .content p {
+    font-size: 1.5rem;
+    color: #999;
+    padding: 0.5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+
+/* make responsive */
+@media (max-width: 450px) {
+    .heading {
+        font-size: 3rem;
+
+    }
+}
+
+/* mission section end */
+
+
+/* icons section start */
+.icons_container {
+    background-color: #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.icons_container .icons {
+    background-color: #fff;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex: 1 1 25rem;
+}
+
+.icons_container .icons i {
+    font-size: 5rem;
+    margin-right: 2rem;
+    color: #333;
+}
+
+.icons_container .icons h3 {
+    color: #333;
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.icons_container .icons span {
+    color: #555;
+    font-size: 1.3rem;
+
+}
+
+@media (max-width: 768px) {
+    .icons_container .icons h3 {
+        font-size: 2rem;
+    }
+
+    .icons_container .icons span {
+        font-size: 1.7rem;
+
+    }
+}
+
+/* icons section ends */
+
+/* product section start */
+.products .card_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+}
+
+.products .card_container .card {
+    flex: 1 1 30rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.8rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.products .card_container .card .discount {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.7rem 1rem;
+    color: #fb6f92;
+    background-color: rgba(255, 51, 153, 0.05);
+    z-index: 1;
+    border-radius: 0.5rem;
+}
+
+.products .card_container .card .card_img {
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+.products .card_container .card .card_img img {
+    height: 25rem;
+
+}
+
+.products .card_container .card:hover .card_img img {
+    transform: scale(1.5);
+
+}
+
+.products .card_container .card .card_img .icons {
+    position: absolute;
+    /* bottom: 0; */
+    bottom: -7rem;
+    left: 0;
+    right: 0;
+    display: flex;
+}
+
+.products .card_container .card:hover .card_img .icons {
+    bottom: 0;
+}
+
+.products .card_container .card .card_img .icons a {
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 1.8rem;
+    width: 50%;
+    background-color: #fb6f92;
+    color: #fff;
+}
+
+.products .card_container .card .card_img .icons .card_btn {
+    border-left: 0.1rem solid #fff7;
+    border-right: 0.1rem solid #fff7;
+    width: 100%;
+}
+
+.products .card_container .card .card_img .icons a:hover {
+    background-color: #333;
+}
+
+/* card content */
+.products .card_container .card .content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.products .card_container .card .content h3 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.products .card_container .card .content .price {
+    font-size: 2rem;
+    color: #fb6f92;
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+
+.products .card_container .card .content .price span {
+    font-size: 1.5rem;
+    color: #999;
+    font-weight: lighter;
+    text-decoration: line-through;
+}
+
+/* product section end */
+
+/* review section start */
+.review .card_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.review .card_container .card {
+    flex: 1 1 30rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 3rem 2rem;
+    position: relative;
+    border: 1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.review .card_container .card .fa-quote-right {
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    font-size: 6rem;
+    color: #eee;
+}
+
+/* stars */
+.review .card_container .card .stars i {
+    color: #fb6f92;
+    font-size: 2rem;
+}
+
+/* paragraph */
+.review .card_container .card p {
+    color: #999;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding-top: 2rem;
+}
+
+/* name */
+.review .card_container .card .user {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* image */
+.review .card_container .card .user img {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+.review .card_container .card .user h3{
+    font-size: 2rem;
+    color: #333;
+}
+.review .card_container .card .user span{
+    font-size: 1.5rem;
+    color: #999;
+}
+
+/* review section end */
+
+/* contact section starts */ 
+.contact  {
+    background-color: #ffe5ec;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    text-align: center; 
+}  
+.contact .paragraph {
+    padding: 3rem; /* Space inside the box */
+    max-width: none; /* Optional: limit the width of the box */
+    text-align: center; /* This centers all text and inline elements within the paragraph div */
+}
+.contact .paragraph h1{
+    font-size: 5rem;
+    margin-bottom: 0.5rem; /* Adjust this value to control the space below the heading */
+}
+.contact .paragraph .underLine {
+  height: 4px;
+  width: 500px;
+  background-color: #000;
+  margin: 0.5rem auto; /* This centers the underline horizontally */
+}
+.contact .paragraph p{
+  font-size: 1.5rem;
+  margin-top: 0.5rem; /* Adjust this value to control the space above the paragraph */
+  margin-bottom: 2.5rem; /* Optional: set this to 0 if you want no space below the paragraph */
+   
+}
+.message .row{
+    display: flex;
+    margin-top: 4rem; 
+    flex-wrap: wrap-reverse;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.message .row form{
+    flex: 1 1 40rem;  /* grow, shrink, basis */
+    padding: 2rem 2.5rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    border: 1rem solid rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 0.5rem;
+}
+
+.message .row .image{
+    flex: 1 1 40rem;
+}
+
+.message .row .image img{
+    width: 100%;
+    
+}
+.message .row form .card{
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    margin: 0.7rem 0;
+    width: 100%;
+}
+.message .row form .card:focus{
+    border-color: #fb6f92;
+}
+.message .row form textarea{
+    height: 15rem;
+    resize: none;
+}
+
+/* contact section end */
+
+
+/* about para section starts */
+.aboutpara {
+    background-color: #ffe5ec;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    text-align: center; 
+}  
+.aboutpara .paragraph {
+    padding: 3rem; /* Space inside the box */
+    max-width: none; /* Optional: limit the width of the box */
+    text-align: center; /* This centers all text and inline elements within the paragraph div */
+}
+.aboutpara .paragraph h1{
+    font-size: 5rem;
+    margin-bottom: 0.5rem; /* Adjust this value to control the space below the heading */
+}
+.aboutpara .paragraph .underLine {
+  height: 4px;
+  width: 500px;
+  background-color: #000;
+  margin: 0.5rem auto; /* This centers the underline horizontally */
+}
+.aboutpara .paragraph p{
+  font-size: 1.5rem;
+  margin-top: 0.5rem; /* Adjust this value to control the space above the paragraph */
+  margin-bottom: 0.5rem; /* Optional: set this to 0 if you want no space below the paragraph */
+   
+}
+
+.grouppic {
+    display: flex;
+    align-items: center;
+    
+    min-height: 100vh;
+    background-image:  url(group-pic.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    top: 0;
+    right: 0; /* Position to the right */
+    padding: 0; /* Add some padding to keep text from touching the edges */
+
+}
+.grouppic .content h3 {
+    font-size: 4rem;
+    color: #ffe5ec;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background for better text readability */
+}
+
+.intro {
+     padding-right: 30rem;
+     padding-left: 30rem;
+     text-align: center;
+ }
+.intro .content1 p {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #666;
+    text-align: justify;
+}
+.intro .content2 p {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: #666;
+    text-align: justify;
+}
+.intro .content3 p {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2.5rem;
+    color: #666;
+    text-align: justify;
+}
+.intro .underLine {
+    height: 4px;
+    width: 100%;
+    background-color: #000;
+    margin: 0.5rem auto; /* This centers the underline horizontally */
+  }
+/* footer section start */
+
+/* cakelist Navbar styling */
+.aboutpara .paragraph .navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px; /* Additional top margin for even more spacing */
+}
+
+.aboutpara .paragraph .navbar a {
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #e798da; /* Button background color */
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.aboutpara .paragraph .navbar a:hover {
+    background-color: #d482c4; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.footer .card_container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+} 
+.footer .card_container .card{
+    flex: 1 1 25rem;
+}
+.footer .card_container .card h3{
+    color: #333;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+.footer .card_container .card a{
+    display: block;
+    color: #666;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.footer .card_container .card p{
+    display: block;
+    color: #666;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+.footer .card_container .card a:hover{
+    color: #fb6f92;
+    text-decoration: underline;
+}
+.footer .card_container .card p:hover{
+    color: #fb6f92;
+    text-decoration: underline;
+}
+.footer .card_container .card img{
+    margin-top: 1rem;
+    height: auto;
+    width: 60%; 
+}
+.footer .credit{
+    background-color:#eee;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: #333;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+.footer .credit span{
+    color: #fb6f92;
+}
+
+/* footer section end */
+
+/* cakelist section start */
+.cakelist .card_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+}
+
+.cakelist .card_container .card {
+    flex: 1 1 30rem;
+    border-radius: 0.8rem;
+    position: relative;
+}
+.cakelist .card_container .card .card_img {
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+.cakelist .card_container .card .card_img img {
+    height: 20rem;
+
+}
+
+/* card content */
+.cakelist .card_container .card .content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.cakelist .card_container .card .content h3 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.cakelist .card_container .card .content .price {
+    font-size: 1.5rem;
+    color: #fb6f92;
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+.cakelist .underLine {
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+    margin: 0.5rem auto; /* This centers the underline horizontally */
+  }
+
+/* cakelist section end */
+
+/* brownies section start */
+.brownies .card_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+}
+
+.brownies .card_container .card {
+    flex: 1 1 30rem;
+    border-radius: 0.8rem;
+    position: relative;
+}
+.brownies .card_container .card .card_img {
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+.brownies .card_container .card .card_img img {
+    height: 20rem;
+
+}
+
+/* card content */
+.brownies .card_container .card .content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.brownies .card_container .card .content h3 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.brownies .card_container .card .content .price {
+    font-size: 1.5rem;
+    color: #fb6f92;
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+.brownies .underLine {
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+    margin: 0.5rem auto; /* This centers the underline horizontally */
+  }
+
+/* brownies section end */
+
+/* bread section start */
+.breads .card_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+}
+
+.breads .card_container .card {
+    flex: 1 1 30rem;
+    border-radius: 0.8rem;
+    position: relative;
+}
+.breads .card_container .card .card_img {
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+.breads .card_container .card .card_img img {
+    height: 20rem;
+
+}
+
+/* card content */
+.breads .card_container .card .content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.breads .card_container .card .content h3 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.breads .card_container .card .content .price {
+    font-size: 1.5rem;
+    color: #fb6f92;
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+.breads .underLine {
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+    margin: 0.5rem auto; /* This centers the underline horizontally */
+  }
+
+/* breads section end */
+
+/* cheesecake section start */
+.cheesecake .card_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+}
+
+.cheesecake .card_container .card {
+    flex: 1 1 30rem;
+    border-radius: 0.8rem;
+    position: relative;
+}
+.cheesecake .card_container .card .card_img {
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+.cheesecake .card_container .card .card_img img {
+    height: 20rem;
+
+}
+
+/* card content */
+.cheesecake .card_container .card .content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.cheesecake .card_container .card .content h3 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.cheesecake .card_container .card .content .price {
+    font-size: 1.5rem;
+    color: #fb6f92;
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+.cheesecake .underLine {
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+    margin: 0.5rem auto; /* This centers the underline horizontally */
+  }
+
+/* cheesecake section end */
+
+/* muffins section start */
+.muffins .card_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+}
+
+.muffins .card_container .card {
+    flex: 1 1 30rem;
+    border-radius: 0.8rem;
+    position: relative;
+}
+.muffins .card_container .card .card_img {
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+.muffins .card_container .card .card_img img {
+    height: 20rem;
+
+}
+
+/* card content */
+.muffins .card_container .card .content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.muffins .card_container .card .content h3 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.muffins .card_container .card .content .price {
+    font-size: 1.5rem;
+    color: #fb6f92;
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+.muffins .underLine {
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+    margin: 0.5rem auto; /* This centers the underline horizontally */
+  }
+
+/* muffins section end */
